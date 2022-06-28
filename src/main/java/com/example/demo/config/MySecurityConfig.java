@@ -24,7 +24,8 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 		//Basic Authentication 
 		//Form Based Authentication
 		http
-			.csrf().disable()
+        .csrf().disable();
+			http.httpBasic().and()
 			.authorizeRequests()
 			 //.antMatchers("/home", "/login" , "/register").permitAll()
 			//.antMatchers("/public/**").permitAll()
